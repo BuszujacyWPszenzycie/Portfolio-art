@@ -46,4 +46,19 @@
 			}
 		}
 	}
+
+	.accordion {
+		&__item {
+			&-title {
+				font-size: 3rem;
+				padding: 3rem;
+				width: 800px;
+				height: 70px;
+			}
+
+			&-info {
+				width: 800px;
+			}
+		}
+	}
 }

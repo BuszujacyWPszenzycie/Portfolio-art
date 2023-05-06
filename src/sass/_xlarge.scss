@@ -1,8 +1,23 @@
-@media (max-width: 1200px) {
-  .header {
+@media (min-width: 1200px) {
+	.header {
 		&__img {
 			padding-top: 10rem;
 			width: 800px;
+		}
+	}
+
+	.accordion {
+		&__item {
+			&-title {
+				font-size: 4rem;
+				padding: 4rem;
+				width: 1000px;
+				height: 80px;
+			}
+
+			&-info {
+				width: 1000px;
+			}
 		}
 	}
 }

@@ -4,6 +4,15 @@ const navModal = document.querySelector('.nav__mobile-modal')
 const navMobileIcon = document.querySelector('.nav__mobile-icon-a')
 const navTop = document.querySelector('.nav__top')
 const allMobileNavItems = document.querySelectorAll('.nav__mobile-modal-item')
+const accordionTitle = document.querySelector('.accordion__item-title')
+
+const openAccordion = () => {
+	accordionTitle.nextElementSibling.classList.toggle('accordion__item-info-active')
+	accordionTitle.style.borderBottomLeftRadius = '0'
+	accordionTitle.style.borderBottomRightRadius = '0'
+}
+
+accordionTitle.addEventListener('click', openAccordion)
 
 // Funcion for adding shadow and background to nav__top
 

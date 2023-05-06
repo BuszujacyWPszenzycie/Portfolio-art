@@ -187,7 +187,7 @@ body {
 // ABOUT ME
 
 .about {
-	height: 100vh;
+	height: 100%;
 	text-align: center;
 	&__picture {
 		width: 300px;
@@ -213,32 +213,64 @@ body {
 	}
 }
 
-// Media
+// EXPERIENCE
+
+.experience {
+	height: 100vh;
+	text-align: center;
+}
+
+.accordion {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	&__item {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		&-title {
+			font-size: 2rem;
+			display: flex;
+			justify-content: space-between;
+			padding: 2rem;
+			align-items: center;
+			width: 400px;
+			height: 60px;
+			background-color: $gray;
+			color: $white;
+			border-radius: 8px;
+			cursor: pointer;
+		}
+
+		&-info {
+			width: 400px;
+			background-color: $light-oragne;
+			color: $black;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+			list-style: none;
+			border-bottom-left-radius: 8px;
+			border-bottom-right-radius: 8px;
+			display: none;
+
+			&-active {
+				display: block;
+			}
+
+			&-li {
+				padding: 1rem;
+				font-size: 2rem;
+			}
+		}
+	}
+}
+
+// MEDIA
 @import './small';
 @import './medium';
 @import './large';
-
-// .nav {
-// 	&__mobile {
-// 		&-top {
-// 			position: absolute;
-// 			width: 100vw;
-// 			display: flex;
-// 			justify-content: space-between;
-// 			align-items: center;
-// 			height: 80px;
-// 			position: fixed;
-// 			padding: 3rem;
-// 		}
-
-// 		&-icon {
-// 			font-size: 4rem;
-// 			text-decoration: none;
-
-// 			&-a {
-// 				text-decoration: none;
-// 				color: $black;
-// 			}
-// 		}
-// 	}
-// }
+@import './_xlarge';

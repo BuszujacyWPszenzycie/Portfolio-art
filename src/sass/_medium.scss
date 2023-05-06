@@ -36,4 +36,19 @@
 			}
 		}
 	}
+
+	.accordion {
+		&__item {
+			&-title {
+				font-size: 3rem;
+				padding: 3rem;
+				width: 700px;
+				height: 70px;
+			}
+
+			&-info {
+				width: 700px;
+			}
+		}
+	}
 }
