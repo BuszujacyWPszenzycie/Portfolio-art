@@ -8,11 +8,16 @@
 
 	.nav {
 		&__mobile {
+			display: none;
 			&-modal {
 				&-item {
 					font-size: 4rem;
 				}
 			}
+		}
+
+		&__desktop {
+			display: block;
 		}
 	}
 }

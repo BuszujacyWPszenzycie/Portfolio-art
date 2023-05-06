@@ -14,5 +14,17 @@
 				}
 			}
 		}
+
+		&__desktop {
+			&-icon {
+				font-size: 5rem;
+			}
+			&-list {
+				&-item {
+					font-size: 3.5rem;
+					padding-right: 4rem;
+				}
+			}
+		}
 	}
 }
