@@ -2,19 +2,30 @@ const body = document.querySelector('body')
 const hamburgerBtn = document.querySelector('.hamburger')
 const navModal = document.querySelector('.nav__mobile-modal')
 const navMobileIcon = document.querySelector('.nav__mobile-icon-a')
-const navMobileTop = document.querySelector('.nav__top')
+const navTop = document.querySelector('.nav__top')
 const allMobileNavItems = document.querySelectorAll('.nav__mobile-modal-item')
-console.log(allMobileNavItems)
+
+// Funcion for adding shadow and background to nav__top
 
 document.addEventListener('DOMContentLoaded', function () {
 	function addShadow() {
+		const navTopAll = document.querySelectorAll('.nav__top')
 		if (window.scrollY >= 80) {
-			navMobileTop.classList.add('nav__top-shadow')
+			for (let i = 0; i < navTopAll.length; i++) {
+				navTopAll[i].classList.add('nav__top-shadow')
+			}
 		} else {
-			navMobileTop.classList.remove('nav__top-shadow')
+			for (let i = 0; i < navTopAll.length; i++) {
+				navTopAll[i].classList.remove('nav__top-shadow')
+			}
 		}
 	}
+	window.addEventListener('scroll', addShadow)
+})
 
+// Function for showing the modal for nav__mobile
+
+document.addEventListener('DOMContentLoaded', function () {
 	allMobileNavItems.forEach(item =>
 		item.addEventListener('click', () => {
 			body.classList.remove('stop-scrolling')
@@ -23,8 +34,6 @@ document.addEventListener('DOMContentLoaded', function () {
 			navMobileIcon.classList.remove('nav__mobile-icon-a-active')
 		})
 	)
-
-	window.addEventListener('scroll', addShadow)
 })
 
 const openMobileNav = () => {
@@ -36,3 +45,5 @@ const openMobileNav = () => {
 }
 
 hamburgerBtn.addEventListener('click', openMobileNav)
+
+//
