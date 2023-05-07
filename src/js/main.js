@@ -5,8 +5,6 @@ const navMobileIcon = document.querySelector('.nav__mobile-icon-a')
 const navTop = document.querySelector('.nav__top')
 const allMobileNavItems = document.querySelectorAll('.nav__mobile-modal-item')
 
-// Adding settimeut
-
 // Function for opening accordion - for all items
 
 const accordionTitles = document.querySelectorAll('.accordion__item-title')

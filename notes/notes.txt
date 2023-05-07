@@ -1,0 +1,78 @@
+HTML to use cards that rotate 180deg:
+
+<div class="certyficate__item">
+  <div class="certyficate__item-title">
+    Excel Finance Functions
+  </div>
+  <div class="certyficate__item-img">
+    <img src="./dist/img/Certyficate (1)_Excel Finance Functions.jpg" alt=""
+      class="certyficate__item-picture">
+
+  </div>
+
+</div>
+
+CSS to use cards that rotate 180deg
+
+.certyficate {
+	&__wrapper {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	&__item {
+		position: relative;
+		height: 450px;
+		width: 350px;
+		text-align: center;
+		perspective: 1000px;
+		border: 1px solid $orange;
+		border-radius: 8px;
+		cursor: pointer;
+
+		&:hover {
+			.certyficate__item-title {
+				transform: rotateY(-180deg);
+				opacity: 0;
+			}
+
+			.certyficate__item-img {
+				transform: rotateY(0);
+				opacity: 1;
+			}
+		}
+
+		&-title {
+			font-size: 3rem;
+			height: 100%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			transition: transform 1s, opacity 1s;
+		}
+
+		&-img {
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			opacity: 0;
+			transform: rotateY(180deg);
+			transition: transform 1s, opacity 1s;
+			// background-image: url('../img/Certyficate (1)_Excel Finance Functions.jpg');
+			background-size: contain;
+			background-repeat: no-repeat;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		&-picture {
+			// height: 450px;
+			width: 350px;
+			// transform: scale(1.6);
+		}
+	}
+}

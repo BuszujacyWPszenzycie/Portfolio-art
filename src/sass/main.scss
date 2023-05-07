@@ -1,4 +1,5 @@
 @use 'colors' as *;
+@use 'mixin' as *;
 
 *,
 *::before,
@@ -34,15 +35,15 @@ body {
 		position: relative;
 		margin: 50px auto;
 		text-align: center;
-		font-size: 40px;
-		max-width: 500px;
+		font-size: 3rem;
+		max-width: 300px;
 		color: $orange;
 		text-transform: uppercase;
 
 		&::before {
 			content: '';
 			display: block;
-			width: 120px;
+			width: 60px;
 			height: 2px;
 			background: $orange;
 			position: absolute;
@@ -53,7 +54,7 @@ body {
 		&::after {
 			content: '';
 			display: block;
-			width: 120px;
+			width: 60px;
 			height: 2px;
 			background: $orange;
 			position: absolute;
@@ -74,7 +75,9 @@ body {
 
 	&__img {
 		padding-top: 10rem;
-		width: 400px;
+		// padding-left: 2rem;
+		// padding-right: 2rem;
+		width: 250px;
 	}
 }
 .nav {
@@ -220,7 +223,7 @@ body {
 // EXPERIENCE
 
 .experience {
-	height: 100vh;
+	height: 100%;
 	text-align: center;
 }
 
@@ -241,16 +244,20 @@ body {
 			justify-content: space-between;
 			padding: 2rem;
 			align-items: center;
-			width: 400px;
+			width: 350px;
 			height: 60px;
 			background-color: $gray;
 			color: $white;
 			border-radius: 8px;
 			cursor: pointer;
+			transition: color 0.4s;
+			&:hover {
+				color: $light-oragne;
+			}
 		}
 
 		&-info {
-			width: 400px;
+			width: 350px;
 			background-color: $light-oragne;
 			color: $black;
 			display: flex;
@@ -260,10 +267,16 @@ body {
 			list-style: none;
 			border-bottom-left-radius: 8px;
 			border-bottom-right-radius: 8px;
-			display: none;
+			// display: none;
+			height: 0;
+			transition: opacity 0.5s ease-out;
+			opacity: 0;
+			overflow: hidden;
 
 			&-active {
-				display: block;
+				opacity: 1;
+				height: auto;
+				// display: block;
 			}
 
 			&-li {
@@ -286,6 +299,153 @@ body {
 .fa-solid.fa-minus.deactive {
 	display: none;
 }
+
+// CERTYFICATES
+
+.certyficate {
+	&__wrapper {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-wrap: wrap;
+	}
+
+	&__div {
+		position: relative;
+		margin: 2rem;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		width: 250px;
+		height: 250px;
+		border: 1px solid $gray;
+		border-radius: 8px;
+		background-color: $light-oragne;
+		cursor: pointer;
+
+		&-one {
+			&:hover {
+				.certyficate__img-one {
+					@include absoluteCenter;
+				}
+			}
+		}
+
+		&-two {
+			&:hover {
+				.certyficate__img-two {
+					@include absoluteCenter;
+				}
+			}
+		}
+
+		&-three {
+			&:hover {
+				.certyficate__img-three {
+					@include absoluteCenter;
+				}
+			}
+		}
+
+		&-four {
+			&:hover {
+				.certyficate__img-four {
+					@include absoluteCenter;
+				}
+			}
+		}
+
+		&-five {
+			&:hover {
+				.certyficate__img-five {
+					@include absoluteCenter;
+				}
+			}
+		}
+
+		&-six {
+			&:hover {
+				.certyficate__img-six {
+					@include absoluteCenter;
+				}
+			}
+		}
+
+		&-seven {
+			&:hover {
+				.certyficate__img-seven {
+					@include absoluteCenter;
+				}
+			}
+		}
+
+		&-eight {
+			&:hover {
+				.certyficate__img-eight {
+					@include absoluteCenter;
+				}
+			}
+		}
+
+		&-nine {
+			&:hover {
+				.certyficate__img-nine {
+					@include absoluteCenter;
+				}
+			}
+		}
+
+		&-ten {
+			&:hover {
+				.certyficate__img-ten {
+					@include absoluteCenter;
+				}
+			}
+		}
+	}
+
+	&__icon {
+		font-size: 5rem;
+	}
+
+	&__title {
+		font-size: 4rem;
+	}
+
+	&__subtitle {
+		font-size: 2rem;
+	}
+
+	&__help {
+		font-size: 1.5rem;
+	}
+
+	&__img {
+		position: absolute;
+		width: 300px;
+		transition: transform 0.8s;
+		transform: translate(-500%);
+		z-index: 5;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border-radius: 8px;
+		box-shadow: 8px 8px 64px 13px rgba(39, 33, 33, 0.4);
+	}
+}
+
+// .front__page {
+// 	transition: transform 1s, opacity 1s;
+// 	opacity: 1;
+// 	overflow: hidden;
+
+// 	&:hover {
+// 		transform: rotateY(-180deg);
+// 		opacity: 0;
+// 	}
+// }
+
 // MEDIA
 @import './small';
 @import './medium';

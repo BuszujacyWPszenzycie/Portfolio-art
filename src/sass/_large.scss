@@ -1,4 +1,18 @@
 @media (min-width: 992px) {
+	.section {
+		&__title {
+			font-size: 5rem;
+			max-width: 700px;
+
+			&::before {
+				width: 170px;
+			}
+
+			&::after {
+				width: 170px;
+			}
+		}
+	}
 	.header {
 		&__img {
 			padding-top: 10rem;
@@ -59,6 +73,12 @@
 			&-info {
 				width: 800px;
 			}
+		}
+	}
+
+	.certyficate {
+		&__img {
+			width: 700px;
 		}
 	}
 }
