@@ -4,15 +4,22 @@ const navModal = document.querySelector('.nav__mobile-modal')
 const navMobileIcon = document.querySelector('.nav__mobile-icon-a')
 const navTop = document.querySelector('.nav__top')
 const allMobileNavItems = document.querySelectorAll('.nav__mobile-modal-item')
-const accordionTitle = document.querySelector('.accordion__item-title')
 
-const openAccordion = () => {
-	accordionTitle.nextElementSibling.classList.toggle('accordion__item-info-active')
-	accordionTitle.style.borderBottomLeftRadius = '0'
-	accordionTitle.style.borderBottomRightRadius = '0'
-}
+// Adding settimeut
 
-accordionTitle.addEventListener('click', openAccordion)
+// Function for opening accordion - for all items
+
+const accordionTitles = document.querySelectorAll('.accordion__item-title')
+const iconsPlus = document.querySelectorAll('.fa-solid.fa-plus')
+
+accordionTitles.forEach(item =>
+	item.addEventListener('click', () => {
+		item.nextElementSibling.classList.toggle('accordion__item-info-active')
+		item.classList.toggle('opened-accordion-item')
+		item.children[0].classList.toggle('deactive')
+		item.children[1].classList.toggle('deactive')
+	})
+)
 
 // Funcion for adding shadow and background to nav__top
 
@@ -55,4 +62,16 @@ const openMobileNav = () => {
 
 hamburgerBtn.addEventListener('click', openMobileNav)
 
-//
+// Function for opening accordion - only working for one item
+
+// const accordionTitle = document.querySelector('.accordion__item-title')
+// const iconPlus = document.querySelector('.fa-solid.fa-plus')
+
+// const openAccordion = () => {
+// 	accordionTitle.nextElementSibling.classList.toggle('accordion__item-info-active')
+// 	accordionTitle.classList.toggle('opened-accordion-item')
+// 	iconPlus.classList.toggle('deactive')
+// 	iconPlus.nextElementSibling.classList.toggle('deactive')
+// }
+
+// accordionTitle.addEventListener('click', openAccordion)

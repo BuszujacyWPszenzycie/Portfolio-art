@@ -179,6 +179,10 @@ body {
 			&-a {
 				text-decoration: none;
 				color: $black;
+				transition: color 0.3s;
+				&:hover {
+					color: $orange;
+				}
 			}
 		}
 	}
@@ -230,6 +234,7 @@ body {
 		justify-content: center;
 		align-items: center;
 		flex-direction: column;
+		padding-bottom: 3rem;
 		&-title {
 			font-size: 2rem;
 			display: flex;
@@ -269,6 +274,18 @@ body {
 	}
 }
 
+.opened-accordion-item {
+	border-bottom-left-radius: 0;
+	border-bottom-right-radius: 0;
+}
+
+.fa-solid.fa-plus.deactive {
+	display: none;
+}
+
+.fa-solid.fa-minus.deactive {
+	display: none;
+}
 // MEDIA
 @import './small';
 @import './medium';
