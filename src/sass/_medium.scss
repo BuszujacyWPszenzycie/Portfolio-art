@@ -66,9 +66,20 @@
 		}
 	}
 
-	.certyficate {
+	.certificate {
 		&__img {
 			width: 500px;
 		}
+	}
+
+	.contact {
+		&__icon {
+			font-size: 6rem;
+			margin: 5rem;
+		}
+	}
+
+	.footer {
+		font-size: 2rem;
 	}
 }

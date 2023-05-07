@@ -300,9 +300,9 @@ body {
 	display: none;
 }
 
-// CERTYFICATES
+// certificateS
 
-.certyficate {
+.certificate {
 	&__wrapper {
 		display: flex;
 		justify-content: center;
@@ -326,7 +326,7 @@ body {
 
 		&-one {
 			&:hover {
-				.certyficate__img-one {
+				.certificate__img-one {
 					@include absoluteCenter;
 				}
 			}
@@ -334,7 +334,7 @@ body {
 
 		&-two {
 			&:hover {
-				.certyficate__img-two {
+				.certificate__img-two {
 					@include absoluteCenter;
 				}
 			}
@@ -342,7 +342,7 @@ body {
 
 		&-three {
 			&:hover {
-				.certyficate__img-three {
+				.certificate__img-three {
 					@include absoluteCenter;
 				}
 			}
@@ -350,7 +350,7 @@ body {
 
 		&-four {
 			&:hover {
-				.certyficate__img-four {
+				.certificate__img-four {
 					@include absoluteCenter;
 				}
 			}
@@ -358,7 +358,7 @@ body {
 
 		&-five {
 			&:hover {
-				.certyficate__img-five {
+				.certificate__img-five {
 					@include absoluteCenter;
 				}
 			}
@@ -366,7 +366,7 @@ body {
 
 		&-six {
 			&:hover {
-				.certyficate__img-six {
+				.certificate__img-six {
 					@include absoluteCenter;
 				}
 			}
@@ -374,7 +374,7 @@ body {
 
 		&-seven {
 			&:hover {
-				.certyficate__img-seven {
+				.certificate__img-seven {
 					@include absoluteCenter;
 				}
 			}
@@ -382,7 +382,7 @@ body {
 
 		&-eight {
 			&:hover {
-				.certyficate__img-eight {
+				.certificate__img-eight {
 					@include absoluteCenter;
 				}
 			}
@@ -390,7 +390,7 @@ body {
 
 		&-nine {
 			&:hover {
-				.certyficate__img-nine {
+				.certificate__img-nine {
 					@include absoluteCenter;
 				}
 			}
@@ -398,7 +398,7 @@ body {
 
 		&-ten {
 			&:hover {
-				.certyficate__img-ten {
+				.certificate__img-ten {
 					@include absoluteCenter;
 				}
 			}
@@ -426,12 +426,52 @@ body {
 		width: 300px;
 		transition: transform 0.8s;
 		transform: translate(-500%);
-		z-index: 5;
+		z-index: 10;
 		display: flex;
 		justify-content: center;
 		align-items: center;
 		border-radius: 8px;
 		box-shadow: 8px 8px 64px 13px rgba(39, 33, 33, 0.4);
+	}
+}
+
+// CONTACT
+
+.contact {
+	&__wrapper {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	&__icon {
+		cursor: pointer;
+		font-size: 4rem;
+		margin: 3rem;
+		text-decoration: none;
+		color: $gray;
+
+		&:hover {
+			color: $light-oragne;
+		}
+	}
+}
+
+// FOOTER
+
+.footer {
+	margin-top: 8rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 1.5rem;
+	flex-wrap: wrap;
+	text-align: center;
+	padding: 2rem;
+
+	&__a {
+		text-decoration: none;
+		color: $orange;
 	}
 }
 
